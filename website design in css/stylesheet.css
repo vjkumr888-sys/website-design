@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: aliceblue;
+    color: midnightblue;
+    line-height: 1.6;
+}
+
+.header {
+    background-color: midnightblue;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.header h1 {
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+
+.header p {
+    color: lightcyan;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+.welcome {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 6px solid dodgerblue;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px lightgray;
+}
+
+.welcome h2 {
+    color: royalblue;
+    margin-bottom: 10px;
+}
+
+.form-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px lightgray;
+    margin-bottom: 35px;
+}
+
+.form-card h2 {
+    text-align: center;
+    color: midnightblue;
+    margin-bottom: 25px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 7px;
+    color: darkslategray;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    background-color: white;
+    color: midnightblue;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: dodgerblue;
+    box-shadow: 0 0 5px lightblue;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.button-group {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+button {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.submit-btn {
+    background-color: royalblue;
+    color: white;
+}
+
+.submit-btn:hover {
+    background-color: midnightblue;
+    transform: translateY(-2px);
+}
+
+.reset-btn {
+    background-color: gainsboro;
+    color: midnightblue;
+}
+
+.reset-btn:hover {
+    background-color: silver;
+    transform: translateY(-2px);
+}
+
+.features {
+    margin-bottom: 35px;
+}
+
+.features h2 {
+    text-align: center;
+    color: midnightblue;
+    margin-bottom: 20px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.feature-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    border-bottom: 4px solid dodgerblue;
+    box-shadow: 0 4px 12px lightgray;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card h3 {
+    color: royalblue;
+    margin-bottom: 10px;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px silver;
+}
+
+.footer {
+    background-color: midnightblue;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 30px;
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .form-card {
+        padding: 22px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .header {
+        padding: 22px 15px;
+    }
+
+    .header h1 {
+        font-size: 26px;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .form-card {
+        padding: 18px;
+    }
+}
